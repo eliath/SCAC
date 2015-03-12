@@ -84,7 +84,23 @@ html
 		.container: #footer
 
 			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+			.row
+				ul.col-md-4.list-unstyled
+					li: a(href="/contact") Contact Us
+					li: a(href="https://brown.edu/academics/creative-arts-council/" target="_blank") CAC
+				
+				.col-md-4
+					
+				.col-md-4.text-right
+					ul.list-unstyled
+						if user
+							if user.canAccessKeystone
+								li: a(href='/keystone') Open Keystone
+							li: a(href='/keystone/signout') Sign Out
+						else
+							li: a(href='/keystone/signin') Sign In
+			.row.text-center
+				p: small Site by <a href="http://eliath.biz/" target="_blank">Elias Martinez Cohen</a> on behalf of the SCAC.
 
 
 		//- JAVASCRIPT

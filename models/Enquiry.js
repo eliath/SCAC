@@ -50,10 +50,10 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 		new keystone.Email('enquiry-notification').send({
 			to: admins,
 			from: {
-				name: 'SCAC',
-				email: 'contact@scac.com'
+				name: 'studentcreativearts.org',
+				email: 'contact@studentcreativearts.org'
 			},
-			subject: 'New Enquiry for SCAC',
+			subject: 'New Enquiry from studentcreativearts.org',
 			enquiry: enquiry
 		}, callback);
 		
