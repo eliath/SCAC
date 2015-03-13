@@ -36,6 +36,12 @@ exports = module.exports = function(app) {
 	
 	// Views
 	app.get('/', routes.views.index);
+	app.get('/lectures', routes.views.lectures);
+	app.get('/exhibitions', routes.views.exhibitions);
+	app.get('/triangles', routes.views.triangles);
+	app.get('/diary', routes.views.diary);
+	
+	// Default Keystone routes
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
 	
