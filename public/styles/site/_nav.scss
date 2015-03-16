@@ -1,0 +1,67 @@
+$num_links: 6;
+$nav_height: 50px;
+$grey_start: #d9d9d9;
+
+
+.navbar-default {
+	height: 50px;
+	box-sizing: border-box;
+	box-shadow: 0 0 2px #888;
+}
+
+.navbar-default .navbar-brand {
+	padding-top: 0; padding-bottom: 0;
+	background: black;
+	&:hover, &:focus {
+		background: black;
+	}
+	img {
+		width: 100px;
+		height: 100px;
+		margin-left: -32px;
+		margin-top: -32px;
+
+	}
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > 
+	a:hover, .navbar-default .navbar-nav > .active > a:focus {
+			box-sizing: border-box;
+			height: $nav_height;
+			border-bottom: 2px solid $red;
+}
+
+.navbar-default .navbar-nav > li {
+	$scale: 2;
+
+	@for $i from 1 to $num_links {
+  		&:nth-of-type(#{$i}) {
+  			$amt: $i*$scale;
+  			a {
+	     		background: lighten($grey_start, $amt);
+  			}
+  		}
+	}
+
+	a {
+		border-right: 1px solid $grey_start;
+		text-transform: uppercase;
+		color: black;
+		&:hover, &.active:hover {
+			color: $red;
+			background: white;
+		}
+	}
+}
+
+.navbar-default .navbar-nav > li.active {
+
+	a {
+		color: black;
+		border-right: 1px solid $grey_start;
+		&:hover, &.active:hover {
+			color: $red;
+			background: inherit;
+		}
+	}
+}

@@ -41,7 +41,7 @@ html
 			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
 			//- ... or completely change this header to suit your design.
 
-			div(role="navigation").navbar.navbar-default
+			div(role="navigation").navbar.navbar-default.navbar-fixed-top
 				.container-fluid
 					.navbar-header
 						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -54,13 +54,13 @@ html
 						ul.nav.navbar-nav.navbar-left
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						ul.nav.navbar-nav.navbar-right
-							if user
-								if user.canAccessKeystone
-									li: a(href='/keystone') Open Panel
-								li: a(href='/keystone/signout') Sign Out
-							else
-								li: a(href='/keystone/signin') Sign In
+						//- ul.nav.navbar-nav.navbar-right
+						//- 	if user
+						//- 		if user.canAccessKeystone
+						//- 			li: a(href='/keystone') Open Panel
+						//- 		li: a(href='/keystone/signout') Sign Out
+						//- 	else
+						//- 		li: a(href='/keystone/signin') Sign In
 
 		//- BODY
 		#body
