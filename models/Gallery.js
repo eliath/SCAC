@@ -6,6 +6,8 @@ var keystone = require('keystone'),
  * =============
  */
 
+/**
+NOT WORKING JUST YET
 var Gallery = new keystone.List('Gallery', {
 	autokey: { from: 'name', path: 'key', unique: true }
 });
@@ -18,3 +20,5 @@ Gallery.add({
 });
 
 Gallery.register();
+
+*/
