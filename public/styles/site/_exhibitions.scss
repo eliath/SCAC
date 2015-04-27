@@ -1,0 +1,47 @@
+#exhibitions {
+	.jumbotron {
+		background: none;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.info {
+		float: left;
+		width: 50%;
+		padding: 0 50px;
+	}
+
+	.poster-wrap {
+		float: left;
+		width: 50%;
+		text-align: center;
+		img {
+			display: inline-block;
+			max-height: calc(100vh - 180px);
+			border: 1px solid black;
+		}
+	}
+
+	.artist-list {
+		list-style-type: none;
+	}
+
+	.half-list {
+		width: 40%;
+		float: left;
+	}
+
+	.sep {
+		height: 1px;
+		width: 100%;
+		margin: 50px 0;
+		background: black;
+		float: left;
+	}
+
+	.info-full {
+		clear: left;
+		margin-top: 75px;
+		width: 61.8%;
+	}
+}

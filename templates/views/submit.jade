@@ -1,0 +1,35 @@
+extends ../layouts/default
+		
+block content
+	#submit.container
+		if _submitted
+			h3 Thanks for your submission! We will be in touch shortly.
+		else
+			h1 Submission Form
+			h4.no-accept The SCAC is not currently accepting submissions for the Spring 2015 semester.<br> Please check back in the fall!
+			.row: .col-sm-8.col-md-6
+				form(method='post')
+					input(type='hidden', name='action', value='submission')
+					.form-group(class=validationErrors.name ? 'has-error' : null)
+						label Name
+						input(type='text', name='name.full', value=formData['name.full'] disabled).form-control
+					.form-group(class=validationErrors.email ? 'has-error' : null)
+						label Email
+						input(type='email', name='email', value=formData.email disabled).form-control
+					.form-group(class=validationErrors.submissionType ? 'has-error' : null)
+						label Which show(s) would you like to submit to?
+						select(name='submissionType' disabled).form-control
+							option(value='') (select one)
+							each type in submissionTypes
+								option(value=type.value, selected=formData.submissionType == type.value)= type.label
+					.form-group(class=validationErrors.description ? 'has-error' : null)
+						label Description of Work
+						textarea(name='description', placeholder='Physical/Conceptual description, media, dimensions, etc...', rows=4 disabled).form-control= formData.description
+					//- .form-group(class=validationErrors.upload ? 'has-error' : null)
+					//- 	label Upload a PDF or .zip archive
+					//- 	input(type="file" name="upload")
+					.form-group(class=validationErrors.link ? 'has-error' : null)
+						label URL:
+						input(type='text', name='link', placeholder='An external link where we can view/download the work.', value=formData.link disabled).form-control
+					.form-actions
+						button(type='submit' disabled).btn.btn-primary Send

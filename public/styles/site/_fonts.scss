@@ -1,0 +1,128 @@
+//┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+//┃                                   ┃
+//┃                     Incosonsolata ┃
+//┃                                   ┃
+//┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+@font-face {
+  font-family: 'Inconsolata';
+  src:  url('/fonts/Inconsolata/Inconsolata.eot');
+  src:  url('/fonts/Inconsolata/Inconsolata.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Inconsolata/Inconsolata.woff') format('woff'), 
+        url('/fonts/Inconsolata/Inconsolata.ttf') format('truetype'), 
+        url('/fonts/Inconsolata/Inconsolata.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+$inconsolata  :    'Inconsolata';
+
+
+//┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+//┃                                   ┃
+//┃                               NzG ┃
+//┃                                   ┃
+//┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+@font-face {
+    font-family: 'NzG';
+    src: url('/fonts/nzg/nzg-black.eot');
+    src: url('/fonts/nzg/nzg-black.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/nzg/nzg-black.woff') format('woff'),
+         url('/fonts/nzg/nzg-black.ttf') format('truetype'),
+         url('/fonts/nzg/nzg-black.svg#nzgblack') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NzG';
+    src: url('/fonts/nzg/nzg-bold.eot');
+    src: url('/fonts/nzg/nzg-bold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/nzg/nzg-bold.woff') format('woff'),
+         url('/fonts/nzg/nzg-bold.ttf') format('truetype'),
+         url('/fonts/nzg/nzg-bold.svg#nzg_boldbold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NzG';
+    src: url('/fonts/nzg/nzg-regular.eot');
+    src: url('/fonts/nzg/nzg-regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/nzg/nzg-regular.woff') format('woff'),
+         url('/fonts/nzg/nzg-regular.ttf') format('truetype'),
+         url('/fonts/nzg/nzg-regular.svg#nzgregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+$nzg   :    'NzG';
+
+
+//┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+//┃                                   ┃
+//┃                          Franklin ┃
+//┃                                   ┃
+//┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+//Book:
+@font-face {
+   font-family: 'Franklin Gothic';
+      src: url('/fonts/FranklinGothic/FranklinGothic-Book.eot');
+      src: url('/fonts/FranklinGothic/FranklinGothic-Book.eot?#iefix') format('embedded-opentype'),
+           url('/fonts/FranklinGothic/FranklinGothic-Book.woff') format('woff'),
+           url('/fonts/FranklinGothic/FranklinGothic-Book.ttf') format('truetype'),
+           url('/fonts/FranklinGothic/FranklinGothic-Book.svg#FranklinGothicBook') format('svg');
+   font-weight: 400;
+   font-style: normal;
+}
+
+//Book Italic:
+@font-face {
+   font-family: 'Franklin Gothic';
+      src: url('/fonts/FranklinGothic/FranklinGothic-BookIt.eot');
+      src: url('/fonts/FranklinGothic/FranklinGothic-BookIt.eot?#iefix') format('embedded-opentype'),
+           url('/fonts/FranklinGothic/FranklinGothic-BookIt.woff') format('woff'),
+           url('/fonts/FranklinGothic/FranklinGothic-BookIt.ttf') format('truetype'),
+           url('/fonts/FranklinGothic/FranklinGothic-BookIt.svg#FranklinGothicBookIt') format('svg');
+   font-weight: 400;
+   font-style: italic;
+}
+
+//Demi:
+@font-face {
+   font-family: 'Franklin Gothic';
+      src: url('/fonts/FranklinGothic/FranklinGothic-Demi.eot');
+      src: url('/fonts/FranklinGothic/FranklinGothic-Demi.eot?#iefix') format('embedded-opentype'),
+           url('/fonts/FranklinGothic/FranklinGothic-Demi.woff') format('woff'),
+           url('/fonts/FranklinGothic/FranklinGothic-Demi.ttf') format('truetype'),
+           url('/fonts/FranklinGothic/FranklinGothic-Demi.svg#FranklinGothicDemi') format('svg');
+   font-weight: 600;
+   font-style: normal;
+}
+
+//Demi Italic:
+@font-face {
+   font-family: 'Franklin Gothic';
+      src: url('/fonts/FranklinGothic/FranklinGothic-DemiIt.eot');
+      src: url('/fonts/FranklinGothic/FranklinGothic-DemiIt.eot?#iefix') format('embedded-opentype'),
+           url('/fonts/FranklinGothic/FranklinGothic-DemiIt.woff') format('woff'),
+           url('/fonts/FranklinGothic/FranklinGothic-DemiIt.ttf') format('truetype'),
+           url('/fonts/FranklinGothic/FranklinGothic-DemiIt.svg#FranklinGothicDemiIt') format('svg');
+   font-weight: 600;
+   font-style: italic;
+}
+
+$franklin  :    'Franklin Gothic';
+
+
+
+
+
+// RESET TITLE FONTS
+h1,h2,h3,h4,h5,h6 {
+  font-family: $franklin;
+}
+h1,h2 {
+  font-weight: 800;
+}

@@ -1,15 +1,23 @@
 extends ../layouts/default
 
 block content
-	.container: .jumbotron
-		h1 Lectures go here!
-		p This will be a place to keep lectures and shit.
-		p Theoretically there will be a big poster image on this page.
-		hr
-		if user && user.canAccessKeystone
-			p You are signed in!
-				a(href='/keystone').btn.btn-lg.btn-primary Go to admin panel
-		else
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
+	#lectures.container
+		.jumbotron
+			h1 Lectures
+		.single-lecture
+			.poster-wrap
+				img.spr-art-poster(src="/images/harbisson_poster.jpg")
+			.info
+				h1 The Lecture Series: Neil Harbisson
+				h3 Monday, March 9
+					br
+					| 6 - 8pm
+					br
+					| Granoff Center for the Creative Arts
+				p Neil Harbisson sees in black and white but hears in color, via an antenna implanted in his skull. A sonochromatic cyborg artist, Harbisson utilizes and explores the connection between his brain and its cybernetic capabilities to create paintings, sound portraits, and performance pieces. 
+				p Harbisson co-founded the Cyborg Foundation, which helps people become cyborgs (extend their senses through cybernetics), defends cyborg rights, and promotes the use of cybernetics in art.
+				p 
+					a(href='https://www.facebook.com/events/331039410438322/') [fb] 
+					| / 
+					a(href='https://www.eventbrite.com/e/the-lecture-series-neil-harbisson-tickets-15657660484') [tickets]
+		.sep

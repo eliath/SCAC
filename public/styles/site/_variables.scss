@@ -2,8 +2,15 @@
 
 $font-size-base: 14px;
 
+/* * * * * * * * *
+GEOMETRY
+* * * * * * * * */
+
 
 /* * * * * * * * *
 COLORS
 * * * * * * * * */
 $red: #dd3b37;
+$grey: #66757f;
+$light_grey_amt: 49;
+$light_grey: lighten($grey, $light_grey_amt);

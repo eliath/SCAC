@@ -17,7 +17,18 @@
 
 // Site Styles
 // ===========
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 // Add your own site style includes here
 @import "site/layout";
+@import "site/fonts";
 @import "site/nav";
+@import "site/home";
+@import "site/exhibitions";
+@import "site/lectures";
+@import "site/triangles";
+@import "site/submit";

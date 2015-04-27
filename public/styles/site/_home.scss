@@ -1,0 +1,54 @@
+#home {
+	position: relative;
+	margin-top: -10px;
+	min-height: calc(100vh - 50px);
+
+	.jumbo-half {
+		&:hover {
+			opacity: 0.8;
+		}
+		width: 50%;
+		height: 100%;
+		&.current {
+			position: absolute;
+			background: url('/images/spring_arts_15.jpg') center bottom no-repeat;
+			background-size: cover;
+		}
+		&.past {
+			position: absolute;
+			left: 50%;
+			background: url('/images/harbi.jpg') center center no-repeat;
+			background-size: cover;
+		}
+
+		.div-title {
+			font-size: 48px;
+			color: black;
+		}
+
+		h1,h2 {
+			position: absolute;
+			opacity: 1;
+			text-align: center;
+			width: 100%;
+		}
+
+		h2 {
+			bottom: 100px;
+			color: white;
+			text-shadow:
+				-1px -1px 0 #000,  
+				1px -1px 0 #000,
+				-1px 1px 0 #000,
+				1px 1px 0 #000;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6 {
+		font-family: $franklin;
+	}
+
+	h1,h2,h3 {
+		font-weight: 800;
+	}
+}

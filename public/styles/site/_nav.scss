@@ -1,67 +1,85 @@
 $num_links: 6;
 $nav_height: 50px;
-$grey_start: #d9d9d9;
+$grey-start: lighten($grey, 36%);
 
 
-.navbar-default {
+.SCACnav {
 	height: 50px;
 	box-sizing: border-box;
 	box-shadow: 0 0 2px #888;
-}
+	background: $light_grey; 
+	.navbar-collapse {
+		background: $light_grey;
+		margin-left: 50px;
+	}
 
-.navbar-default .navbar-brand {
-	padding-top: 0; padding-bottom: 0;
-	background: black;
-	&:hover, &:focus {
+	font-family: $franklin;
+	
+	.navbar-brand {
+		padding-top: 0; padding-bottom: 0;
 		background: black;
+		&:hover, &:focus {
+			background: black;
+		}
+		img {
+			z-index: 2;
+			position:absolute;
+			width: 105px;
+			height: 105px;
+			margin-left: -30px;
+			margin-top: -27px;
+		}
 	}
-	img {
-		width: 100px;
-		height: 100px;
-		margin-left: -32px;
-		margin-top: -32px;
 
-	}
-}
-
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > 
-	a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	.navbar-nav > .active > a, 
+	.navbar-nav > .active > a:hover, 
+	.navbar-nav > .active > a:focus {
 			box-sizing: border-box;
 			height: $nav_height;
-			border-bottom: 2px solid $red;
-}
+			border-bottom: 4px solid $red;
+	}
 
-.navbar-default .navbar-nav > li {
-	$scale: 2;
 
-	@for $i from 1 to $num_links {
-  		&:nth-of-type(#{$i}) {
-  			$amt: $i*$scale;
-  			a {
-	     		background: lighten($grey_start, $amt);
-  			}
+	.navbar-nav > li {
+
+		$scale: 15 / $num_links;
+
+		@for $i from 1 to $num_links {
+	  		&:nth-of-type(#{$i}) {
+	  			$amt: $i * $scale;
+	  			a {
+		     		background: lighten($grey_start, $amt);
+	  			}
+	  		}
+		}
+
+		&:nth-of-type(1) a {
+			padding-left: 43px;
   		}
-	}
 
-	a {
-		border-right: 1px solid $grey_start;
-		text-transform: uppercase;
-		color: black;
-		&:hover, &.active:hover {
-			color: $red;
-			background: white;
+		a {
+			border-right: 1px solid $grey_start;
+			text-transform: uppercase;
+			color: darken($grey, 10);
+			padding: 15px 35px;
+			&:hover {
+				color: $red;
+				background: inherit;
+			}
+		}
+
+		&.active {
+
+			a {
+				color: darken($grey, 33%);
+				border-right: 1px solid $grey_start;
+				&:hover, &.active:hover {
+					color: $red;
+					background: inherit;
+				}
+			}
 		}
 	}
-}
 
-.navbar-default .navbar-nav > li.active {
 
-	a {
-		color: black;
-		border-right: 1px solid $grey_start;
-		&:hover, &.active:hover {
-			color: $red;
-			background: inherit;
-		}
-	}
 }
