@@ -18,7 +18,5 @@ Gallery.add({
 	heroImage: { type: Types.CloudinaryImage },
 	images: { type: Types.CloudinaryImages }
 });
-
-Gallery.register();
-
 */
+Gallery.register();
