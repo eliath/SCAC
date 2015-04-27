@@ -6,12 +6,12 @@ var keystone = require('keystone'),
  * =============
  */
 
-/**
-NOT WORKING JUST YET
 var Gallery = new keystone.List('Gallery', {
 	autokey: { from: 'name', path: 'key', unique: true }
 });
 
+/**
+NOT WORKING JUST YET
 Gallery.add({
 	name: { type: String, required: true },
 	publishedDate: { type: Date, default: Date.now },
