@@ -10,13 +10,13 @@ var Gallery = new keystone.List('Gallery', {
 	autokey: { from: 'name', path: 'key', unique: true }
 });
 
-/**
-NOT WORKING JUST YET
+
+// NOT WORKING JUST YET(?)
 Gallery.add({
 	name: { type: String, required: true },
-	publishedDate: { type: Date, default: Date.now },
+	publishedDate: { type: Date, 'default': Date.now },
 	heroImage: { type: Types.CloudinaryImage },
 	images: { type: Types.CloudinaryImages }
 });
-*/
+
 Gallery.register();
